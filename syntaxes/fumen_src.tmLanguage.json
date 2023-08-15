@@ -1,0 +1,58 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "Fumen Source",
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#commands"
+		},
+		{
+			"include": "#timing"
+		}
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [
+				{
+					"name": "string.quoted.other.fumen_src",
+					"match": "['\"].*"
+				}
+			]
+		},
+		"commands": {
+			"patterns": [
+				{
+					"name": "keyword.control.fumen_src",
+					"match": "\\[.+?\\]"
+				}
+			]
+		},
+		"timing": {
+			"patterns": [
+				{
+					"name": "keyword.control.fumen_src.blank",
+					"match": "\\-"
+				},
+				{
+					"name": "keyword.control.fumen_src.both_plus_typing_cutoff",
+					"match": "\\*"
+				},
+				{
+					"name": "keyword.control.fumen_src.hiragana",
+					"match": "\\+"
+				},
+				{
+					"name": "keyword.control.fumen_src.typing_cutoff",
+					"match": "\\/"
+				},
+				{
+					"name": "keyword.control.fumen_src.kanji_plus_typing_cutoff",
+					"match": "\\%"
+				}
+			]
+		}
+	},
+	"scopeName": "source.fumen_src"
+}

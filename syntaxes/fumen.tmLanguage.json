@@ -1,0 +1,52 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "Fumen",
+	"patterns": [
+		{
+			"include": "#p"
+		}
+	],
+	"repository": {
+		"p": {
+			"patterns": [
+				{
+					"match": "([=/-])(\\d*.\\d*)",
+					"captures": {
+						"1": {
+							"name": "keyword.operator.fumen"
+						},
+						"2": {
+							"name": "constant.numeric.fumen"
+						}
+					}
+				},
+				{
+					"match": "([*+])(\\d*.\\d*) (.*)",
+					"captures": {
+						"1": {
+							"name": "keyword.operator.fumen"
+						},
+						"2": {
+							"name": "constant.numeric.fumen"
+						},
+						"3": {
+							"name": "string.unquoted.fumen"
+						}
+					}
+				},
+				{
+					"match": "(@)(.*)",
+					"captures": {
+						"1": {
+							"name": "keyword.operator.fumen"
+						},
+						"2": {
+							"name": "string.unquoted"
+						}
+					}
+				}
+			]
+		}
+	},
+	"scopeName": "source.fumen"
+}

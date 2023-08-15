@@ -1,0 +1,39 @@
+{
+  "name": "utyping-fumen-support",
+  "displayName": "UTyping Fumen Support",
+  "description": "Adds support for the UTyping Fumen song format and source files",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.81.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [
+      {
+        "id": "fumen",
+        "aliases": ["Fumen", "fumen"],
+        "extensions": [".txt"],
+        "configuration": "./fumen-configuration.json"
+      },{
+        "id": "fumen_src",
+        "aliases": ["Fumen Source", "fumen_src"],
+        "extensions": [".txt"],
+        "configuration": "./fumen-src-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "fumen",
+        "scopeName": "source.fumen",
+        "path": "./syntaxes/fumen.tmLanguage.json"
+      },
+      {
+        "language": "fumen_src",
+        "scopeName": "source.fumen_src",
+        "path": "./syntaxes/fumen_src.tmLanguage.json"
+      }
+    ]
+  }
+}

@@ -3,6 +3,10 @@
   "displayName": "UTyping Fumen Support",
   "description": "Adds support for the UTyping Fumen song format and source files",
   "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Beyley/utyping-fumen-support"
+  },
   "engines": {
     "vscode": "^1.81.0"
   },
